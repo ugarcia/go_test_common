@@ -1,9 +1,12 @@
 package models
 
 type BaseMessage struct {
-    Sender          string                 `json:"sender"`
+    Source          string                 `json:"source"`
+    Target          string                 `json:"target"`
+    Code            string                 `json:"code"`
+    Action          string                 `json:"action"`
+    ConnectionType  string                 `json:"connection_type"`
     ConnectionId    uint                   `json:"connection_id"`
     Broadcast       bool                   `json:"broadcast"`
-    Action          string                 `json:"action"`
     Data            map[string]interface{} `json:"data"`
 }
